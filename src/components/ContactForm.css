@@ -1,0 +1,9 @@
+/* ContactForm.css */
+
+.contact-form-background {
+    background-image: url('https://www.boldsky.com/img/2023/06/1-1685804177.jpg'); /* Replace 'path/to/your-image.jpg' with your image URL */
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+  }
+  
