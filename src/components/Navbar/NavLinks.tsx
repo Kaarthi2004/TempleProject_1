@@ -5,7 +5,6 @@ import { IonIcon } from "@ionic/react";
 
 const NavLinks = () => {
   const [heading, setHeading] = useState("");
-  const [subHeading, setSubHeading] = useState("");
   return (
     <>
       {links.map((link) => (
@@ -15,7 +14,6 @@ const NavLinks = () => {
               className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
-                setSubHeading("");
               }}
             >
               {link.name}
@@ -42,9 +40,6 @@ const NavLinks = () => {
                   <div className="bg-white p-5 grid grid-cols-3 gap-10">
                     {link.sublinks.map((mysublinks) => (
                       <div>
-                        <h1 className="text-lg font-semibold">
-                          {mysublinks.Head}
-                        </h1>
                         {mysublinks.sublink.map((slink) => (
                           <li className="text-sm text-gray-600 my-2.5">
                             <Link
@@ -72,31 +67,7 @@ const NavLinks = () => {
             {link.sublinks.map((slinks) => (
               <div>
                 <div>
-                  <h1
-                    onClick={() =>
-                      subHeading !== slinks.Head
-                        ? setSubHeading(slinks.Head)
-                        : setSubHeading("")
-                    }
-                    className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex justify-between items-center "
-                  >
-                    {slinks.Head}
-
-                    <span className="text-xl md:mt-1 md:ml-2 inline">
-                      <IonIcon
-                        name={`${
-                          subHeading === slinks.Head
-                            ? "chevron-up"
-                            : "chevron-down"
-                        }`}
-                      ></IonIcon>
-                    </span>
-                  </h1>
-                  <div
-                    className={`${
-                      subHeading === slinks.Head ? "md:hidden" : "hidden"
-                    }`}
-                  >
+                  <div>
                     {slinks.sublink.map((slink) => (
                       <li className="py-3 pl-14">
                         <Link to={slink.link}>{slink.name}</Link>

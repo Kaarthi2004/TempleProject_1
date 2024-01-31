@@ -16,4 +16,4 @@ const GetStartedButton = () => {
   );
 };
 
-export default GetStartedButton;
+export default GetStartedButton; 
