@@ -17,9 +17,9 @@ const [open, setOpen] = useState(false);
             <IonIcon name={`${open ? "close" : "menu"}`}></IonIcon>
           </div>
         </div>
-        <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
+        <ul className="md:flex hidden uppercase items-center gap-4 font-[Poppins]">
           <li>
-            <a href="/" className="py-7 px-3 inline-block">
+            <a href="/" className="py-7 px-2 inline-block">
               Home
             </a>
           </li>
@@ -28,6 +28,8 @@ const [open, setOpen] = useState(false);
         <div className="md:block hidden">
           <GetStartedButton/>
         </div>
+
+        
         {/* Mobile nav */}
         <ul
           className={`
