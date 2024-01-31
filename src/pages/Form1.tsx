@@ -1,4 +1,3 @@
-import Nav from '../components/Nav';
 import axios from "axios";
 
 const Form1 = () => {
@@ -15,7 +14,7 @@ const Form1 = () => {
         const currentaddress = event.target.currentaddress.value;
         const data = {firstname, lastname, mobilenumber, email, occupation, interest, permanentaddress, currentaddress};
         axios
-            .post("https://jsonplaceholder.typicode.com/posts", data)
+            .post("https://localhost:8000/test", data)
             .then((response) =>{
                 console.log(response);
                 event.target.reset();
@@ -28,7 +27,6 @@ const Form1 = () => {
 
     return (
     <>
-    <Nav></Nav> 
         <section className="bg-white dark:bg-gray-900">
             <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
                 <h1 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">Fill the Details</h1>

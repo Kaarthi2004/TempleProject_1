@@ -3,12 +3,10 @@ import jsonData from "./carouselData.json";
 
 
 function MyCarousel() {
-   
-
   return (
-    <div className="rounded-none h-64px [&_.snap-mandatory]:rounded-none md:h-full lg:h-96 xl:h-96 2xl:h-96">
+    <div className="relative rounded-none h-64px [&_.snap-mandatory]:rounded-none md:h-full lg:h-96 xl:h-96 2xl:h-96">
       <Carousel indicators={false}>{jsonData.map((slide, index) => (
-          <div key={index} className="relative  h:40 w-full  lg:h-full lg:w-full">
+          <div key={index} className="relative z-10 h:40 w-full  lg:h-full lg:w-full">
             <img
             
               className="object-fill h-96 w-full md:h-full md:w-full lg:h-96 lg:w-full"

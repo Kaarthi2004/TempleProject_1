@@ -1,10 +1,11 @@
-import Nav from '../components/Nav';
 import Preloader from '../components/Preloader';
 import Mycarousel from '../components/Mycarousel';
 import Card from '../components/EventCard';
 import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import ContactUs from '../components/ContactUs';
+import Navbar from '../components/Navbar/Navbar';
+
 function Home() {
     const [isLoading, setIsLoading] = useState(true);
  
@@ -21,8 +22,8 @@ function Home() {
                {isLoading ? (
                    <Preloader />
                 ) : (
-             <div>
-                  <Nav/>
+             <div className='relative'>
+                  <Navbar/>
                   <Mycarousel />
                   <Card />
                   <ContactUs/>
